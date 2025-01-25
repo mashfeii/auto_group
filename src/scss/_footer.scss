@@ -1,0 +1,17 @@
+//====================================================================================================
+.footer {
+  &__container {
+    &:not(:first-child) {
+      margin-top: rem(49);
+    }
+    padding-top: rem(31);
+    padding-bottom: rem(28);
+    border-top: 1px solid #e8e8eb;
+    text-align: center;
+  }
+  &__copyright {
+    line-height: math.div(17, 14);
+    @include adaptiveValue('font-size', 14, 12);
+  }
+}
+//====================================================================================================

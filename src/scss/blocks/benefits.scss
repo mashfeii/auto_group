@@ -1,0 +1,33 @@
+.page__benefits {
+  &:not(:last-child) {
+    margin-bottom: rem(45);
+  }
+}
+
+.benefits {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(30);
+
+    > * {
+      flex: 1;
+    }
+
+    //== 992px ==//
+    @media(max-width: $tb) {
+      grid-template-columns: repeat(2, 1fr);
+      > *:nth-child(3n) {
+        grid-column: span 2;
+      }
+    }
+
+    //== 768px ==//
+    @media(max-width: $mb) {
+      grid-template-columns: 1fr;
+      > *:nth-child(3n) {
+        grid-column: span 1;
+      }
+    }
+  }
+}

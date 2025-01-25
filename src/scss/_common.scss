@@ -1,0 +1,31 @@
+[hidden] {
+  display: none;
+}
+
+.title {
+  font-family: 'Unbounded', 'Montserrat', sans-serif;
+  font-weight: 700;
+  line-height: math.div(42, 33);
+  @include adaptiveValue('font-size', 33, 22);
+}
+
+._center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+._covered {
+  padding: rem(43) rem(95) rem(73);
+  background-color: #f2f5f8;
+  border-radius: rem(30);
+
+  //== 992px ==//
+  @media(max-width: $tb) {
+    padding: rem(40) rem(90) rem(50);
+  }
+
+  @media(max-width: em(639.98)) {
+    padding: rem(30) rem(30) rem(40);
+  }
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+  @@include('html/general/_head.htm',{ "title":"Главная" })
+  <body>
+    <div class="wrapper">
+      @@include('html/general/_header.htm',{})
+      <main class="page">
+        @@include('html/blocks/hero.htm',{})
+        @@include('html/blocks/benefits.htm',{})
+        @@include('html/blocks/request.htm',{})
+        @@include('html/blocks/driver.htm',{})
+        <section class="page__driver driver driver-benefits">
+          <div class="driver__container container">
+            <h2 class="driver__title title _center">Наши преимущества:</h2>
+            <div class="driver__body">
+              <div class="driver__card">
+                <div class="driver__card-icon">
+                  <img src="@img/icons/benefits_3.svg" alt="" />
+                </div>
+                <span class="driver__card-text"
+                  >Команда специалистов с большим опытом работы</span
+                >
+              </div>
+              <div class="driver__card">
+                <div class="driver__card-icon">
+                  <img src="@img/icons/benefits_2.svg" alt="" />
+                </div>
+                <span class="driver__card-text"
+                  >Доступные цены и быстрое прохождение осмотра</span
+                >
+              </div>
+              <div class="driver__card">
+                <div class="driver__card-icon">
+                  <img src="@img/icons/benefits_1.svg" alt="" />
+                </div>
+                <span class="driver__card-text">Читаемый путевой лист</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        @@include('html/blocks/license.htm',{})
+      </main>
+      @@include('html/general/_footer.htm',{})
+    </div>
+    @@include('html/general/_popup.htm',{}) @@include('html/general/_js.htm',{})
+  </body>
+</html>

@@ -1,0 +1,97 @@
+.page__hero {
+  &:not(:last-child) {
+    margin-bottom: rem(47);
+  }
+}
+
+.hero {
+  &__container {
+    overflow: hidden;
+    position: relative;
+    padding: rem(76) rem(50) rem(87);
+    background-color: #f2f5f8;
+    border-radius: rem(30);
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 26%;
+      height: 80%;
+      bottom: 11.2%;
+      right: 7.1%;
+      @extend %bg-con;
+      background-image: url('@img/hero/image.png');
+
+      //== 1200px ==//
+      @media (max-width: $note-m) {
+        right: 2.5%;
+        bottom: 3%;
+      }
+      //== 992px ==//
+      @media (max-width: $tb) {
+        bottom: -10%;
+      }
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        bottom: 0;
+      }
+    }
+
+    //== 768px ==//
+    @media (max-width: $mb) {
+      padding: rem(46) rem(28) rem(55);
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    max-width: 60%;
+
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      max-width: 70%;
+    }
+    //== 992px ==//
+    @media (max-width: $tb) {
+      max-width: none;
+    }
+  }
+
+  &__form {
+    //== 992px ==//
+    @media (max-width: $tb) {
+      max-width: rem(400);
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      max-width: rem(320);
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      &:not(:first-child) {
+        margin-top: rem(60);
+      }
+    }
+  }
+
+  &__title {
+    font-family: 'Unbounded', 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: math.div(43, 36);
+    @include adaptiveValue('font-size', 36, 24);
+
+    &:not(:last-child) {
+      margin-bottom: em(28, 36);
+    }
+  }
+
+  &__description {
+    line-height: math.div(29, 22);
+    @include adaptiveValue('font-size', 22, 16);
+
+    &:not(:last-child) {
+      margin-bottom: em(45, 22);
+    }
+  }
+}

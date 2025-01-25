@@ -1,0 +1,23 @@
+.phone {
+  @extend %fl-r-ct;
+  gap: rem(11);
+
+  font-weight: 700;
+  line-height: math.div(24, 20);
+  transition: color 0.3s ease 0s;
+  @include adaptiveValue('font-size', 20, 16);
+
+  @media(any-hover: hover) {
+    &:hover {
+      color: var(--clr-accent);
+    }
+  }
+
+  svg {
+    fill: var(--clr-accent);
+    flex: 0 0 rem(13);
+    width: rem(13);
+    height: rem(13);
+    object-fit: contain;
+  }
+}
