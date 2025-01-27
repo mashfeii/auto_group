@@ -83,7 +83,7 @@ import * as flsFunctions from "./files/functions.js";
 import * as flsForms from "./files/forms/forms.js";
 
 //* Валидация форм + отправка через MailPHP *//
-// import './files/forms/validate.js';
+import './files/forms/validate.js';
 
 /* Работа с полями формы */
 /* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */

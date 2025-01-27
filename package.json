@@ -65,6 +65,7 @@
   "dependencies": {
     "aos": "latest",
     "inputmask": "latest",
+    "just-validate": "^4.3.0",
     "lightgallery": "latest",
     "nouislider": "latest",
     "simplebar": "latest",

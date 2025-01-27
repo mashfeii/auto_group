@@ -13,6 +13,26 @@
     @media (max-width: $tb) {
       flex-direction: column;
       align-items: stretch;
+      gap: rem(16);
+    }
+  }
+  &__item {
+    position: relative;
+  }
+  .just-validate-error-label {
+    font-size: rem(12);
+
+    //== 992px ==//
+    @media (min-width: $tb) {
+      position: absolute;
+      top: calc(100% + rem(5));
+      left: rem(8);
+    }
+
+    //== 992px ==//
+    @media (max-width: $tb) {
+      padding-left: rem(10);
+      padding-top: rem(2);
     }
   }
   &__column {
